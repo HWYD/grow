@@ -1,0 +1,15 @@
+<!-- 活动规则弹框 -->
+<view class='rulePopView'  hidden='{{ruleDesImageHidden}}'>
+
+ <!-- 活动规则详细说明图 -->
+ <view class='ruleDesView'>
+  <image class='ruleDesImage' src="{{activity.ActRules?activity.ActRules:ruleDesImageUrl}}" mode = 'aspectFit'></image>
+ 
+ </view>
+
+ <!-- 取消 -->
+ <view class='cancelView'>
+  <image class='cancelImage' src="http://weixin.siyanli.net.cn/static/miniimg/guanbichuangkou.png" mode = 'aspectFit' bindtap='ruleDesHiddenAction'></image>
+ </view>
+
+</view>

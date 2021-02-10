@@ -1,0 +1,9 @@
+<view class="title">代办事项</view>
+<picker mode="date" bindchange="setTime">
+<view class="pickBox" >
+<view class="left">事件时间：</view>
+<view class="right">{{thingTime}}<i class="iconfont icon-xiangyou-copy rightcode"></i></view>
+</view>
+</picker>
+<x-textbox textlength="100" placeholder="请写下代办事项" bind:textdetail="getText"/>
+<x-btn bind:tap="submitTask"/>

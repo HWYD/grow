@@ -1,0 +1,9 @@
+<view class="title">
+你本次坚持了:
+</view>
+<view class="liveTime">
+{{minutes}}:{{seconds}}
+</view>
+<view class="motto">
+{{motto}}
+</view>

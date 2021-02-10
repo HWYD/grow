@@ -1,0 +1,59 @@
+<view class="title">
+关于小程序的一些小事情~
+</view>
+<view class="author">
+<text decode="{{true}}" class="author_desc">作者&ensp;&ensp;</text>
+<text decode="{{true}}" class="author_name">月亮邮递员&ensp;&ensp;</text>
+<text class="author_date">2020-3-12</text>
+</view>
+
+<view class="bgImg1">
+<image src="cloud://kaitou-c63f6d.6b61-kaitou-c63f6d-1258831758/bgImg/bgImg1.jpg"></image>
+</view>
+<view class="preface">
+哈喽，欢迎你来到小程序中！本人一直想写一个个人小程序，在之前我看慕课网教程学习并制作了一个关于音乐播放，发布博客动态等功能的小程序.
+</view>
+<view class="preface">
+但是在向微信团队提交代码时，被告知个人类小程序尚未支持社交类，音乐类等功能，只有企业类小程序才可以发布，我非常失望!
+
+</view>
+<view class="preface">
+因为我学了几个月的教程，代码功能也实现了，却栽在了最后一步，无法上线。
+</view>
+
+<view class="preface">
+但是还是想自己开发一个小程序，所以我就去观看别人做的个人小程序到底是什么样子的，发现很多都是工具类小程序，因为工具类小程序可以个人开发并发布</view>
+<view class="preface">所以我想了很多idea,看了很多人做的小程序，最终决定做这个小程序，功能虽然简单，但是我还是很开心~</view>
+<view class="preface">
+小程序主要有两个功能，一是时间计算，用户可以查看到自己存在这个世界上多长时间，界面的表格显示有两种样式，二是每日计划的制定，用户完成时可以长按，字体变为红色且有删除线。
+</view>
+
+<view class="preface">
+我写这篇文章的目的呢？一是为我的界面多加一个选项，看起来好看一点(哈哈哈偷笑!)；二是用css写一篇文章的排版也挺不错的！三是写一下这个小程序有关的事情也挺好！</view>
+
+
+
+<view class="bgImg2">
+    <image src="https://image.weilanwl.com/gif/loading-white.gif" mode="aspectFit" class="gif-white" style="width:100%;height:300rpx"></image>
+  </view>
+  <view class="mine_desc">下面是我上次做的音乐和博客的小程序</view>
+<view class="mineImg">
+<swiper autoplay="{{true}}" vertical="{{true}}">
+<block wx:for="{{mineImg}}" wx:key="index">
+<swiper-item  data-index="{{index}}" bindtap="preview">
+<image src="{{item}}"></image>
+</swiper-item>
+</block>
+
+</swiper>
+
+
+</view>
+
+
+
+
+  <view class="bye">
+
+<text decode="{{true}}">goodbye&ensp;!</text>
+  </view>

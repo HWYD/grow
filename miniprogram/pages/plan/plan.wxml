@@ -1,0 +1,18 @@
+<view class="goal">
+每日三个小目标！
+</view>
+<block wx:for="{{isExist?planList:hint}}" wx:key="id">
+<view  class="plan {{index==perform[index]?'perform1':''}}"  bindtap="onPlanning" bind:longpress="isperform"
+data-planId="{{index}}"
+ >
+{{item.plan}}
+</view>
+</block>
+<view class="tip">点击可以修改，长按完成目标哦~</view>
+
+<picker bindchange="selectGoal" value="{{index}}" 
+range="{{selectGoal}}" >
+<view class="startGoal">
+开始行动
+</view>
+  </picker>

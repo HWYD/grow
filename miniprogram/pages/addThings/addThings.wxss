@@ -1,0 +1,29 @@
+.title{
+  text-align: center;
+  font-size: 32rpx;
+  margin: 22rpx 0;
+}
+.pickBox{
+  width: 650rpx;
+  height: 100rpx;
+  margin: 20rpx auto;
+  display: flex;
+  flex-direction: row;
+  border-top: solid 1rpx rgb(211,211,211,0.7);
+  border-bottom: solid 1rpx rgb(211,211,211,0.7);
+  position: relative;
+}
+.left{
+  width: 30%;
+  display: flex;  
+  align-items: center;
+}
+.right{
+  width: 70%;
+  display: flex;
+   align-items: center;
+}
+.rightcode{
+  position: absolute;
+  right: 10rpx;
+}

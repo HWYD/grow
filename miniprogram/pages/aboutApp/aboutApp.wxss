@@ -1,0 +1,82 @@
+page{
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+.title{
+  width: 90%;
+  height: auto;
+  margin: 30rpx auto;
+  font-size: 42rpx;
+  font-weight: 600;
+    /* background-color: yellow; */
+}
+.author{
+  width: 90%;
+  margin: 0 auto;
+}
+.author_desc, .author_date{
+   color: rgb(211,211,211);
+   font-size: 28rpx;
+}
+.author_name{
+  color: rgb(19, 102, 185);
+  font-size: 28rpx;
+}
+.bgImg1{
+  width: 94%;
+  height: 220rpx;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  box-shadow: 0rpx 0rpx 10rpx rgba(0, 102, 204, 0.2);
+}
+.bgImg1 image{
+  width: 100%;
+  height: 100%;
+}
+.preface{
+  width: 86%;
+  height: auto;
+  margin: 25rpx auto;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  letter-spacing: 6rpx;
+ 
+}
+.gif-white{  
+  mix-blend-mode: multiply; 
+}
+.bgImg2{
+  width: 90%;
+  height: auto;
+  margin: 10rpx auto;
+  margin-top: 70rpx;
+  box-shadow: 0rpx 0rpx 10rpx rgba(0, 102, 204, 0.5);
+
+}
+.mine_desc{
+  text-align: center;
+  font-size: 32rpx;
+  margin: 36rpx 0;
+}
+.mineImg{
+  width:600rpx;
+  height: 1200rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  box-shadow: 0rpx 0rpx 10rpx rgba(0, 102, 204, 0.5);
+}
+swiper{
+  width: 100%;
+height: 100%;
+}
+swiper image{
+width: 100%;
+height: 100%;
+}
+.bye{
+  text-align: center;
+  color: rgba(0, 102, 204, 0.8);
+  font-size: 50rpx;
+  font-weight: 600;
+  margin-top: 100rpx;
+  margin-bottom: 500rpx;
+}

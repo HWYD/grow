@@ -1,0 +1,48 @@
+<view class="bigContainer">
+<view class="userAvatar">
+<open-data  type="userAvatarUrl"></open-data>
+</view>
+<view class="nickName">
+<view><open-data type="userNickName"></open-data></view>
+<view class="meetTime">我们相遇{{timeContent}}天了~</view>
+</view>
+</view>
+<!-- 下面的选项 -->
+<view class="bigModal">
+<!-- <view class="modal">
+<navigator url="/pages/playhistory/playhistory" hover-class="none">
+<image src="../../images/smile.png"></image>
+<text>超级心愿</text> <i class="iconfont icon-xiangyou-copy rightcode"></i>
+</navigator>
+</view>
+<view class="line"></view> -->
+<!-- 分割线 -->
+<view class="modal" bindtap="isshowMotto">
+<!-- <navigator url="/pages/setMotto/setMotto" hover-class="none"> -->
+<image src="../../images/smile16.png"></image>
+<text>我的格言</text> <i class="iconfont icon-xiangyou-copy rightcode"></i>
+<!-- </navigator> -->
+</view>
+<view class="line"></view>
+<!-- 分割线 -->
+<view class="modal" bindtap="myShare">
+<image src="../../images/smile2.png"></image>
+<text>分享他人</text> <i class="iconfont icon-xiangyou-copy rightcode"></i>
+</view>
+<view class="line"></view>
+<!-- 分割线 -->
+<view class="modal" bindtap="showAuthor">
+<image src="../../images/smile3.png"></image>
+<text>联系作者</text> <i class="iconfont icon-xiangyou-copy rightcode"></i>
+</view>
+<view class="line"></view>
+<!-- 分割线 -->
+<view class="modal">
+<navigator url="/pages/aboutApp/aboutApp" hover-class="none">
+<image src="../../images/smile1.png"></image>
+<text>关于小程序</text> <i class="iconfont icon-xiangyou-copy rightcode"></i>
+</navigator>
+</view>
+<view class="line"></view>
+<!-- 分割线 -->
+</view>

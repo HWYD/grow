@@ -1,0 +1,14 @@
+<!-- <view class="chest">
+<view class="heart left sided top"></view>
+<view class="heart center"></view>
+<view class="heart right sided"></view>
+</view> -->
+
+
+<button bindtap="sendNews">点击我</button>
+<button bindtap="getAllow" type='primary'>授权</button>
+<view class="motto" bindtap="uploadMottos">
+
+<button>保存名言</button>
+</view>
+

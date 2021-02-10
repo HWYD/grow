@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/liveTime/liveTime",
+    "pages/plan/plan",
+    "pages/me/me",
+    "pages/planning/planning",
+    "pages/aboutApp/aboutApp",
+    "pages/test/test",
+    "pages/test1/test1",
+    "pages/showUser/showUser",
+    "pages/setMotto/setMotto",
+    "pages/acting/acting",
+    "pages/modaltest/modaltest",
+    "pages/addThings/addThings",
+    "pages/things/things"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "成长",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/liveTime/liveTime",
+        "text": "成长",
+        "iconPath": "images/shouye.png",
+        "selectedIconPath": "images/shouye2.png"
+      },
+      {
+        "pagePath": "pages/plan/plan",
+        "text": "计划",
+        "iconPath": "images/faxian.png",
+        "selectedIconPath": "images/faxian1.png"
+      },
+      {
+        "pagePath": "pages/things/things",
+        "text": "倒数日",
+        "iconPath": "images/things0.png",
+        "selectedIconPath": "images/things1.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "images/geren.png",
+        "selectedIconPath": "images/geren2.png"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx61ee29772640c440"
+  ],
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

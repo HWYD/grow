@@ -1,0 +1,7 @@
+<view class="content">
+<view class="box">
+ <textarea class="textcontent"   placeholder="{{placeholder}}" maxlength="{{textlength}}" bindinput="onInput" >
+ </textarea>
+</view>
+<view class="wordcount">{{wordnum}}/{{textlength}}</view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "x-textbox":"../../components/textbox/textbox",
+    "x-btn":"../../components/btn/btn"
+  }
+}

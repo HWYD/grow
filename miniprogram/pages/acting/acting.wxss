@@ -1,0 +1,32 @@
+/* miniprogram/pages/acting/acting.wxss */
+page{
+background-image:url('https://6b61-kaitou-c63f6d-1258831758.tcb.qcloud.la/mottobg.png?sign=fb66923710c17bc3bcef63e42dff9e34&t=1585734150');
+    background-repeat:no-repeat;
+    background-position:center;
+    color: white;
+}
+.title{
+  text-align: center;
+  font-size: 30rpx;
+  margin-top: 150rpx;
+}
+.liveTime{
+  margin-top: 30rpx;
+  text-align: center;
+  font-size: 100rpx
+}
+.motto{
+  width: 660rpx;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  font-size: 30rpx;
+  text-indent: 2em;
+  line-height: 50rpx;
+ padding: 10rpx;
+ padding-top: 20rpx;
+ background-color: rgba(182, 180, 180, 0.1);
+ letter-spacing: 1rpx; 
+ word-break:break-all; 
+word-wrap: break-word; 
+}

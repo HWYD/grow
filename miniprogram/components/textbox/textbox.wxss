@@ -1,0 +1,33 @@
+.content{
+  width: 670rpx;
+  height: 400rpx;
+  margin: 0 auto;
+  border-radius: 25rpx;
+  box-shadow: 0 0 15rpx rgba(0, 0, 0, 0.2);
+   background-color: #ffffff;
+   position: relative;
+}
+.box{
+ width: 600rpx;
+  height: 300rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  padding-top: 30rpx;
+}
+.textcontent{
+  width: 600rpx;
+  height: 300rpx;
+  box-sizing: border-box; 
+  
+}
+.wordcount{
+  width: 100rpx;
+  height: auto;
+  position: absolute;
+  text-align: right;
+  right: 10rpx;
+  bottom: 10rpx;
+  color: #dadbdb;
+  font-size: 25rpx;
+  
+}

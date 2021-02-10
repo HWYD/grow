@@ -1,0 +1,11 @@
+<view class="title">我的目标</view>
+<view class="content">
+<view class="box">
+ <textarea class="textcontent"   value="{{placeholder}}" maxlength="50" bindinput="onInput" bindblur="onBlur" >
+ </textarea>
+</view>
+<view class="wordcount">{{wordnum}}/50</view>
+</view>
+<view class="btn" bindtap="changePlan">
+完成
+</view>

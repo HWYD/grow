@@ -1,0 +1,19 @@
+<view class="title"><text>我的格言</text>
+<switch bindchange="setMottoShow" checked="{{mottoShow}}"></switch></view>
+<view class="content">
+<view class="box">
+ <textarea class="textcontent" bindinput="onInput" value="{{placeholder}}" maxlength="120">
+ </textarea>
+</view>
+<view class="wordcount">{{wordnum}}/120</view>
+</view>
+<view class="btn" data-motto="{{content}}" bindtap="changeMotto">
+完成
+</view>
+<block wx:for="{{mottosList}}" wx:key="index">
+<view class="mottoItem {{index==slelectId?'selectColor':''}}" data-motto="{{item}}" data-index="{{index+1}}"  bindtap="changeMotto">
+{{index+1}}、{{item}}
+
+</view>
+
+</block>

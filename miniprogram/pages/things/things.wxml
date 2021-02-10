@@ -1,0 +1,21 @@
+<view wx:if="{{isshow&&thingsList.length>0}}">
+<block wx:for="{{thingsList}}" wx:key="index">
+<view class="title">小记{{index+1}}</view>
+<view class="box" data-index="{{index}}" bind:longpress="ondelete">
+<view class="start">开始：{{item.time}}</view>
+<view class="{{item.detail.length>15?'thing':'thing center'}}"><text>{{item.detail}}</text>
+
+</view>
+<view class="distance">
+{{item.distance}}
+</view> 
+</view>
+</block>
+</view>
+<view wx:else class="firstbox">
+<text class="iconfont icon-zanwushuju noexist"> </text>
+</view>
+<view class="add" bindtap="addThing">
+<image src="../../images/add.png"></image>
+</view>
+<view class="prompt">记录重要的事情，不错过重要的时刻！</view>

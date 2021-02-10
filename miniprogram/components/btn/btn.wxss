@@ -1,0 +1,14 @@
+.btn{
+  width: 180rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  margin-top: 60rpx;
+  border-radius: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #0081ff;
+  font-size: 30rpx;
+  box-shadow: 10rpx 10rpx 15rpx rgba(0, 102, 204, 0.2);
+}
