@@ -1,0 +1,14 @@
+{
+  "name": "grow",
+  "version": "1.0.0",
+  "description": "成长时间记录",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hwy",
+  "license": "ISC",
+  "dependencies": {
+    "weui-miniprogram": "^1.2.4"
+  }
+}

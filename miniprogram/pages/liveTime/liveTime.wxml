@@ -2,21 +2,21 @@
 <canvas canvas-id="clock"/>
 </view>
 <view class="title"><text decode="{{true}}">你已经&ensp;{{yearFixed}}&ensp;岁了</text></view>
-<view class="{{isShow?'context1':'context'}}">
-在这个世界上，你已经存在
+<view class="{{otherDisplay?'context1':'context'}}">
+在这个世界上，你已经存在    
 </view>
-<view hidden="{{isShow}}" bindtap="onChange">
+<view hidden="{{otherDisplay}}" bindtap="onChange">
 <view class="timeList" >
 <block wx:for="{{timeList}}" wx:key="index">
-<view class="{{index==6?'timeItem6':'timeItem'}}" >
-<view class="litter-box">{{item.value}}</view>
-<view class="litter-box">{{item.name}}</view>
-</view>
+  <view class="timeItem" >
+    <view class="litter-box">{{item.value}}</view>
+    <view class="litter-box">{{item.name}}</view>
+  </view>
 </block>
 </view>
 </view>
 <!-- 这是另一个模板 -->
-<view hidden="{{!isShow}}" bindtap="onChange">
+<view hidden="{{!otherDisplay}}" bindtap="onChange">
 <view class="timeList1" >
 <view class="timeItem1" wx:for="{{timeList}}" wx:key="index">
 <view class="litter-otherbox">{{item.value}}</view>
@@ -25,14 +25,11 @@
 </view>
 </view>
 
-<view class="motto" data-motto="{{motto}}" hidden="{{!mottoShow}}" bindtap="gotoMotto">
-{{motto}}
+<view class="motto" data-motto="{{userConfig.motto}}" hidden="{{!userConfig.mottoShow || !userConfig.motto}}" bindtap="setting">
+{{userConfig.motto}}
 </view>
 
 
-<view class="setTime">
-<picker mode="date" value="{{date}}" start="1800-09-01" end="2020-09-01" bindchange="bindDateChange">
-<view class="set_img"><image src="../../images/set.png"></image></view>
-<view>设置</view>
-  </picker>
+<view class="setting" bindtap="setting">
+<mp-icon icon="setting" color="colorLight" size="25"></mp-icon>
 </view>

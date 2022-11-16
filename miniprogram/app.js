@@ -14,7 +14,15 @@ App({
         traceUser: true,
       })
     }
-
+    wx.getStorage({
+      key: 'createTime',
+      fail: () => {
+        wx.setStorage({
+          key:'createTime',
+          data:Date.now()
+        })
+      }
+    })  
     this.globalData = {}
   }
 })

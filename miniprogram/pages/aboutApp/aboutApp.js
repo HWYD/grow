@@ -28,7 +28,6 @@ Page({
   })
   },
   preview(event){
-    console.log(event.currentTarget.dataset.index)
     let imgIndex = event.currentTarget.dataset.index
   wx.previewImage({
     urls: this.data.mineImg,

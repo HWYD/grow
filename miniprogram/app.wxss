@@ -1,4 +1,5 @@
 @import "iconfont.wxss";
+@import 'miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
 page{
   font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 }

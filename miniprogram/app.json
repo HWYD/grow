@@ -38,12 +38,6 @@
         "selectedIconPath": "images/faxian1.png"
       },
       {
-        "pagePath": "pages/things/things",
-        "text": "倒数日",
-        "iconPath": "images/things0.png",
-        "selectedIconPath": "images/things1.png"
-      },
-      {
         "pagePath": "pages/me/me",
         "text": "我的",
         "iconPath": "images/geren.png",
@@ -51,9 +45,15 @@
       }
     ]
   },
-  "navigateToMiniProgramAppIdList": [
-    "wx61ee29772640c440"
-  ],
   "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "style": "v2",
+  "usingComponents": {
+    "mp-form-page": "weui-miniprogram/form-page/form-page",
+    "mp-cell": "weui-miniprogram/cell/cell",
+    "mp-cells": "weui-miniprogram/cells/cells",
+    "mp-form": "weui-miniprogram/form/form",
+    "mp-badge": "weui-miniprogram/badge/badge",
+    "mp-icon": "weui-miniprogram/icon/icon"
+  },
+  "lazyCodeLoading": "requiredComponents"
 }

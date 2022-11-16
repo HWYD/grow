@@ -1,11 +1,16 @@
-<view class="bigContainer">
-<view class="userAvatar">
-<open-data  type="userAvatarUrl"></open-data>
-</view>
-<view class="nickName">
-<view><open-data type="userNickName"></open-data></view>
-<view class="meetTime">我们相遇{{timeContent}}天了~</view>
-</view>
+<block wx:if="{{!userInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" class="weui-btn" type="primary" bindtap="getUserProfile" > 获取头像昵称1 </button>
+      <button wx:else open-type="getUserInfo" class="weui-btn" type="primary" bindgetuserinfo="getUserInfo"> 获取头像昵称2 </button>
+</block>
+<!-- <button class="weui-btn" type="primary"  bindgetuserinfo="bindGetUserInfo">获取头像昵称</button> -->
+<view class="bigContainer" wx:else>
+  <view class="userAvatar">
+   <image src="{{userInfo.avatarUrl}}" class="avatar"/>
+  </view>
+  <view class="nickName">
+    <view>{{userInfo.nickName}}</view>
+    <view class="meetTime">我们相遇{{useTime}}天了~</view>
+  </view>
 </view>
 <!-- 下面的选项 -->
 <view class="bigModal">
@@ -17,32 +22,32 @@
 </view>
 <view class="line"></view> -->
 <!-- 分割线 -->
-<view class="modal" bindtap="isshowMotto">
+<view class="modal" bindtap="setting">
 <!-- <navigator url="/pages/setMotto/setMotto" hover-class="none"> -->
 <image src="../../images/smile16.png"></image>
-<text>我的格言</text> <i class="iconfont icon-xiangyou-copy rightcode"></i>
+<text>我的设置</text> <i class="iconfont icon-xiangyou-copy rightcode"></i>
 <!-- </navigator> -->
 </view>
 <view class="line"></view>
 <!-- 分割线 -->
-<view class="modal" bindtap="myShare">
+<!-- <view class="modal" bindtap="myShare">
 <image src="../../images/smile2.png"></image>
 <text>分享他人</text> <i class="iconfont icon-xiangyou-copy rightcode"></i>
 </view>
-<view class="line"></view>
+<view class="line"></view> -->
 <!-- 分割线 -->
-<view class="modal" bindtap="showAuthor">
+<!-- <view class="modal" bindtap="showAuthor">
 <image src="../../images/smile3.png"></image>
 <text>联系作者</text> <i class="iconfont icon-xiangyou-copy rightcode"></i>
 </view>
-<view class="line"></view>
+<view class="line"></view> -->
 <!-- 分割线 -->
-<view class="modal">
+<!-- <view class="modal">
 <navigator url="/pages/aboutApp/aboutApp" hover-class="none">
 <image src="../../images/smile1.png"></image>
 <text>关于小程序</text> <i class="iconfont icon-xiangyou-copy rightcode"></i>
 </navigator>
-</view>
-<view class="line"></view>
+</view> -->
+<!-- <view class="line"></view> -->
 <!-- 分割线 -->
 </view>

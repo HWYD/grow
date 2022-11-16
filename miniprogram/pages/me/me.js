@@ -1,5 +1,5 @@
 // pages/me/me.js
-let startTime=''
+let startTime = ''
 let show = [
   { express: '../../images/smile.png', desc: '高兴认识你哦~' },
   { express: '../../images/smile1.png', desc: '来啊，加微信' },
@@ -16,143 +16,132 @@ let show = [
   { express: '../../images/smile12.png', desc: '哦~' },
   { express: '../../images/smile13.png', desc: '好开心呀!~' },
   { express: '../../images/smile14.png', desc: '讨厌!~' },
-  { express: '../../images/smile15.png', desc: '嗯嗯好呢!~' },
+  { express: '../../images/smile15.png', desc: '嗯嗯好呢!~' }
 ]
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-   timeContent:'',
-   
+    useTime: '',
+    userInfo: '',
+    canIUseGetUserProfile: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   this.getbirth()
-  },
-  isshowMotto(){
-   wx.showModal({
-     title: '是否显示格言？',
-     cancelText:'隐藏',
-     confirmText:'显示',
-     success:((res)=>{
-       if (res.confirm) {
-        this.changeMottoShow(true)
-       } else if (res.cancel) {
-         this.changeMottoShow(false)
-       }
-     })
-
-   })
-  },
-  //设置格言是否显示的数据库操作方法
-  changeMottoShow(detail) {
-    wx.cloud.callFunction({
-      name: 'saveMotto',
-      data: {
-        $url: 'changeMottoShow',
-        mottoShow: detail
+    wx.getStorage({
+      key: 'userInfo',
+      success: (res) => {
+        this.setData({
+          userInfo: JSON.parse(res.data)
+        })
       }
-    }).then((res) => {
-      console.log(res)
     })
-  },
-  //获取用户时间
-  getbirth() {
-    wx.cloud.callFunction({
-      name: 'getUserTime',
-      data: {
-        $url: 'getBirthday'
-      }
-    }).then((res) => {
-      console.log(res.result[0].createTime)
-      startTime = res.result[0].createTime
-      startTime = new Date(startTime)
-      let nowTime =new Date()
-      let timeContent = Math.ceil((nowTime - startTime)/1000/60/60/24)
-      // console.log(nowTime - startTime)
-      // console.log(timeContent)
+    this.getuseTime()
+    if (wx.getUserProfile) {
       this.setData({
-          timeContent
+        canIUseGetUserProfile: true
       })
-    })
-    
+    }
   },
-  showAuthor(){
+  getUserProfile(e) {
+    // 推荐使用 wx.getUserProfile 获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
+    // 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
+    wx.getUserProfile({
+      desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+      success: (res) => {
+        this.setData({
+          userInfo: res.userInfo
+        })
+        wx.setStorage({
+          key: 'userInfo',
+          data: JSON.stringify(res.userInfo)
+        })
+      }
+    })
+  },
+  getUserInfo(e) {
+    // 不推荐使用 getUserInfo 获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
+    this.setData({
+      userInfo: e.detail.userInfo
+    })
+  },
+  setting() {
+    wx.navigateTo({
+      url: `../setMotto/setMotto`
+    })
+  },
+  //获取用户使用时间
+  getuseTime() {
+    wx.getStorage({
+      key: 'createTime',
+      success: (res) => {
+        const useTime = Math.ceil((Date.now() - res.data) / 1000 / 60 / 60 / 24)
+        this.setData({ useTime })
+      }
+    })
+  },
+  showAuthor() {
     let ran = Math.floor(Math.random() * 16)
-   console.log(ran)
-   wx.showToast({
-     title: show[ran].desc,
-     image:show[ran].express,
-     mask:true
-   })
-  }, 
-  myShare(){
-wx.showLoading({
-  title: '生成中',
-})
-wx.cloud.callFunction({
-  name:'myShare'
-}).then((res)=>{
-  // console.log(res)
-  const fileId =res.result
-  wx.previewImage({
-    urls: [fileId],
-    current:fileId
-  })
-  wx.hideLoading()
-})
+    wx.showToast({
+      title: show[ran].desc,
+      image: show[ran].express,
+      mask: true
+    })
+  },
+  myShare() {
+    wx.showLoading({
+      title: '生成中'
+    })
+    wx.cloud
+      .callFunction({
+        name: 'myShare'
+      })
+      .then((res) => {
+        const fileId = res.result
+        wx.previewImage({
+          urls: [fileId],
+          current: fileId
+        })
+        wx.hideLoading()
+      })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-
-  },
+  onReady: function () {},
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
-  },
+  onShow: function () {},
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-
-  },
+  onHide: function () {},
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-
-  },
+  onUnload: function () {},
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-
-  },
+  onPullDownRefresh: function () {},
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-
-  },
+  onReachBottom: function () {},
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
-  }
+  onShareAppMessage: function () {}
 })

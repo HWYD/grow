@@ -1,163 +1,137 @@
 {
-	"miniprogramRoot": "miniprogram/",
-	"cloudfunctionRoot": "cloudfunctions/",
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"enhance": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true,
-		"coverView": true,
-		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		},
-		"useIsolateContext": true,
-		"useCompilerModule": false,
-		"userConfirmedUseCompilerModuleSwitch": false
-	},
-	"appid": "wx9884a32be613b48c",
-	"projectname": "countDown",
-	"libVersion": "2.8.1",
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"compileType": "miniprogram",
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": 0,
-			"list": [
-				{
-					"id": -1,
-					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "pages/me/me",
-					"pathName": "pages/me/me",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/test/test",
-					"pathName": "pages/test/test",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/planning/planning",
-					"pathName": "pages/planning/planning",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/plan/plan",
-					"pathName": "pages/plan/plan",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/hh/hh",
-					"pathName": "pages/hh/hh",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/aboutApp/aboutApp",
-					"pathName": "pages/aboutApp/aboutApp",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/test/test",
-					"pathName": "pages/test/test",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/test1/test1",
-					"pathName": "pages/test1/test1",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/showUser/showUser",
-					"pathName": "pages/showUser/showUser",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/setMotto/setMotto",
-					"pathName": "pages/setMotto/setMotto",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/acting/acting",
-					"pathName": "pages/acting/acting",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/modaltest/modaltest",
-					"pathName": "pages/modaltest/modaltest",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/addThings/addThings",
-					"pathName": "pages/addThings/addThings",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/things/things",
-					"pathName": "pages/things/things",
-					"query": "",
-					"scene": null
-				}
-			]
-		}
-	}
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": false,
+    "userConfirmedUseCompilerModuleSwitch": false
+  },
+  "appid": "wx9884a32be613b48c",
+  "projectname": "countDown",
+  "libVersion": "2.8.1",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "compileType": "miniprogram",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "pages/me/me",
+          "pathName": "pages/me/me",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/test/test",
+          "pathName": "pages/test/test",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/planning/planning",
+          "pathName": "pages/planning/planning",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/plan/plan",
+          "pathName": "pages/plan/plan",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/hh/hh",
+          "pathName": "pages/hh/hh",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/aboutApp/aboutApp",
+          "pathName": "pages/aboutApp/aboutApp",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/test/test",
+          "pathName": "pages/test/test",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/test1/test1",
+          "pathName": "pages/test1/test1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/showUser/showUser",
+          "pathName": "pages/showUser/showUser",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/setMotto/setMotto",
+          "pathName": "pages/setMotto/setMotto",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/acting/acting",
+          "pathName": "pages/acting/acting",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/modaltest/modaltest",
+          "pathName": "pages/modaltest/modaltest",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addThings/addThings",
+          "pathName": "pages/addThings/addThings",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/things/things",
+          "pathName": "pages/things/things",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "srcMiniprogramRoot": "miniprogram/",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
 }

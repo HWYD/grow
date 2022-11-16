@@ -1,19 +1,31 @@
-<view class="title"><text>我的格言</text>
-<switch bindchange="setMottoShow" checked="{{mottoShow}}"></switch></view>
-<view class="content">
-<view class="box">
- <textarea class="textcontent" bindinput="onInput" value="{{placeholder}}" maxlength="120">
- </textarea>
-</view>
-<view class="wordcount">{{wordnum}}/120</view>
-</view>
-<view class="btn" data-motto="{{content}}" bindtap="changeMotto">
-完成
-</view>
-<block wx:for="{{mottosList}}" wx:key="index">
-<view class="mottoItem {{index==slelectId?'selectColor':''}}" data-motto="{{item}}" data-index="{{index+1}}"  bindtap="changeMotto">
-{{index+1}}、{{item}}
+<mp-form-page title="信息设置" subtitle="通过提供的信息进行计算，展示首页的效果。">
+  <mp-form>
+    <mp-cells title="">
+      <mp-cell ext-class="weui-cell_select weui-cell_select-after">
+        <view slot="title" class="weui-label">生日日期：</view>
+          <picker mode="date" value="{{date}}" start="1800-09-01" end="{{slelectEndTime}}" bindchange="bindDateChange">
+            <view class="weui-select">{{userConfig.birthday}}</view>
+          </picker>
+      </mp-cell>
+      <!-- <mp-cell ext-class="weui-cell_select weui-cell_select-after">
+        <view slot="title" class="weui-label">生日时间：</view>
+          <picker mode="time" value="{{time}}">
+            <view class="weui-select">{{userConfig.birthday}}</view>
+          </picker>
+      </mp-cell> -->
+      <mp-cell title="格言展示" ext-class="">
+        <switch slot="footer" bindchange="setMottoShow" checked="{{userConfig.mottoShow}}" />
+      </mp-cell>
+    </mp-cells>
+    <mp-cells title="格言内容">
+      <mp-cell has-header="{{false}}" has-footer="{{false}}" title="" ext-class="">
+        <textarea class="weui-textarea" bindinput="onInput" value="{{userConfig.motto}}" placeholder="请输入" maxlength="120" style="height: 3.3em" />
+        <view class="weui-textarea-counter">{{userConfig.motto.length}}/120</view>
+        </mp-cell>
+    </mp-cells>
+  </mp-form>
+  <view slot="button">
+      <button class="weui-btn" type="primary" data-motto="{{userConfig.content}}" bindtap="save">保存</button>
+  </view>
+</mp-form-page>
 
-</view>
-
-</block>

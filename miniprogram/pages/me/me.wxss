@@ -1,6 +1,9 @@
 page{
  background-color: #f7f7f7;
 }
+.weui-btn{
+  margin: 60rpx 0;
+}
 .bigContainer{
   width: 100%;
   height: 350rpx;
@@ -16,7 +19,10 @@ page{
   margin: 20rpx;
   overflow: hidden;
   margin-left: -90rpx;
-  
+}
+.avatar{
+  width: 100%;
+  height: 100%;
 }
 .nickName{
   width: 100%;
@@ -33,7 +39,6 @@ page{
   font-weight: 500;
   padding-top: 8rpx;
   color: rgba(211,211,211,1);
-  
 }
 /* 下面的选项 */
 .bigModal{

@@ -1,72 +1,67 @@
-page{
- background-color: #f7f7f7;
+page {
+  background-color: #f7f7f7;
 }
-.currentTime{
+.currentTime {
   width: 100%;
   height: 500rpx;
   /* background-color: red; */
 }
 canvas {
-   width: 100%;
-  height: 100% ;           
+  width: 100%;
+  height: 100%;
 }
-.currentTime image{
+.currentTime image {
   width: 400rpx;
   height: 400rpx;
 }
-.title{
+.title {
   /* margin-top: 20rpx; */
   font-size: 50rpx;
   font-weight: 600rpx;
   text-align: center;
 }
-.context{
+.context {
   width: 664rpx;
   margin: 0 auto;
-  color: rgb(211,211,211);
+  color: rgb(211, 211, 211);
   padding: 10rpx 0;
   font-size: 30rpx;
 }
-.context1{
+.context1 {
   width: 550rpx;
   margin: 0 auto;
-  color: rgb(211,211,211);
+  color: rgb(211, 211, 211);
   padding: 10rpx 0;
   font-size: 30rpx;
 }
-.timeList{
-  width: 664rpx;
-  height: 393rpx;
-  margin: 0 auto;
-  border-top: solid 1rpx rgb(211,211,211);
-  border-left: solid 1rpx rgb(211,211,211);
+.timeList {
   display: flex;
   flex-wrap: wrap;
-   align-items: center;
+  align-items: center;
+  max-width: 670rpx;
+  width: auto;
+  margin: 0 auto;
+  border: solid 1rpx rgb(211, 211, 211);
 }
-.timeItem{
+.timeItem {
+  display: flex;
+  flex-direction: column;
   width: 220rpx;
   height: 130rpx;
-  margin: 0;
-  padding: 0;
   text-align: center;
-  border-bottom: solid 1rpx rgb(211,211,211);
-  border-right: solid 1rpx rgb(211,211,211);
-  display: flex;
-  flex-direction: column;
+  border-bottom: solid 1rpx rgb(211, 211, 211);
+  border-right: solid 1rpx rgb(211, 211, 211); 
 }
-.timeItem6{
-  width: 664rpx;
+/* 第3个和第6个 */
+.timeItem:nth-child(3n+3){
+  border-right: none;
+}
+.timeItem:last-child{
+  width: 100%;
   height: 130rpx;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  border-bottom: solid 1rpx rgb(211,211,211);
-  border-right: solid 1rpx rgb(211,211,211);
-  display: flex;
-  flex-direction: column;
+  border: none;
 }
-.litter-box{
+.litter-box {
   width: 100%;
   height: 50%;
   display: flex;
@@ -74,37 +69,35 @@ canvas {
   align-items: center;
 }
 
-
 /* 切换的css */
-.timeList1{
- border-top: solid 1rpx rgb(211,211,211);
- border-left: solid 1rpx rgb(211,211,211);
- height: 637rpx;
- width: 550rpx;
- margin: 0 auto;
+.timeList1 {
+  border-top: solid 1rpx rgb(211, 211, 211);
+  border-left: solid 1rpx rgb(211, 211, 211);
+  height: 637rpx;
+  width: 550rpx;
+  margin: 0 auto;
 }
-.timeItem1{
+.timeItem1 {
   width: 550rpx;
   height: 90rpx;
   display: flex;
   flex-direction: row;
-  border-right: solid 1rpx rgb(211,211,211);
-  border-bottom: solid 1rpx rgb(211,211,211);
- 
+  border-right: solid 1rpx rgb(211, 211, 211);
+  border-bottom: solid 1rpx rgb(211, 211, 211);
 }
-.litter-otherbox{
+.litter-otherbox {
   width: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.litter-otherbox1{
+.litter-otherbox1 {
   width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.motto{
+.motto {
   width: 660rpx;
   height: auto;
   margin: 0 auto;
@@ -112,39 +105,18 @@ canvas {
   font-size: 30rpx;
   text-indent: 2em;
   line-height: 50rpx;
- padding: 10rpx;
- padding-top: 20rpx;
- background-color: rgba(182, 180, 180, 0.1);
- letter-spacing: 1rpx;
+  padding: 10rpx;
+  padding-top: 20rpx;
+  background-color: rgba(182, 180, 180, 0.1);
+  letter-spacing: 1rpx;
   /* box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1); */
-  word-break:break-all; 
-word-wrap: break-word; 
+  word-break: break-all;
+  word-wrap: break-word;
 }
 
-
-.setTime{
-  width: 100rpx;
-  height: 100rpx;
-  background-color: rgba(30,144,255, 0.8);
-  border-radius: 50%;
+.setting {
   position: fixed;
-  right: 25rpx;
-  top: 16rpx;
-  text-align: center;
-  font-size: 22rpx;
-  color: white;
-  letter-spacing: 4rpx;
-  box-shadow: 0rpx 0rpx 30rpx rgba(0, 102, 204, 0.2);
-}
-.set_img{
-  width: 50rpx;
-  height: 50rpx;
-  margin: 0 auto;
-  margin-top: 12rpx;
-  margin-bottom: 3rpx;
-}
-.setTime image{
-  width: 100%;
-  height: 100%;
-
+  right: 30rpx;
+  top: 20rpx;
+  padding: 7px;
 }
