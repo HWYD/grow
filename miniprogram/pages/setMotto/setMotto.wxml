@@ -1,23 +1,24 @@
-<mp-form-page title="信息设置" subtitle="通过提供的信息进行计算，展示首页的效果。">
+<mp-toptips msg="{{tipMsg}}" type="warn" show="{{tipShow}}"></mp-toptips>
+<mp-form-page title="信息设置" subtitle="信息只保存在个人手机，展示首页的效果。">
   <mp-form>
     <mp-cells title="">
       <mp-cell ext-class="weui-cell_select weui-cell_select-after">
         <view slot="title" class="weui-label">生日日期：</view>
-          <picker mode="date" value="{{date}}" start="1800-09-01" end="{{slelectEndTime}}" bindchange="bindDateChange">
+          <picker mode="date" value="{{date}}" start="1800-09-01" end="{{slelectEndDay}}" bindchange="bindDateChange">
             <view class="weui-select">{{userConfig.birthday}}</view>
           </picker>
       </mp-cell>
-      <!-- <mp-cell ext-class="weui-cell_select weui-cell_select-after">
+      <mp-cell ext-class="weui-cell_select weui-cell_select-after">
         <view slot="title" class="weui-label">生日时间：</view>
-          <picker mode="time" value="{{time}}">
-            <view class="weui-select">{{userConfig.birthday}}</view>
+          <picker mode="time" value="{{time}}" bindchange="bindTimeChange">
+            <view class="weui-select">{{userConfig.birthTime}}</view>
           </picker>
-      </mp-cell> -->
-      <mp-cell title="格言展示" ext-class="">
+      </mp-cell>
+      <mp-cell title="座右铭展示" ext-class="">
         <switch slot="footer" bindchange="setMottoShow" checked="{{userConfig.mottoShow}}" />
       </mp-cell>
     </mp-cells>
-    <mp-cells title="格言内容">
+    <mp-cells title="座右铭内容">
       <mp-cell has-header="{{false}}" has-footer="{{false}}" title="" ext-class="">
         <textarea class="weui-textarea" bindinput="onInput" value="{{userConfig.motto}}" placeholder="请输入" maxlength="120" style="height: 3.3em" />
         <view class="weui-textarea-counter">{{userConfig.motto.length}}/120</view>

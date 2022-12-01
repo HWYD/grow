@@ -1,0 +1,38 @@
+<mp-toptips msg="{{tipMsg}}" type="warn" show="{{tipShow}}"></mp-toptips>
+<mp-form-page title="信息设置" subtitle="信息只保存在个人手机，展示首页的效果。">
+  <mp-form models="{{milepost}}" rules="{{rules}}">
+    <mp-cells title="">
+      <mp-cell prop="title" title="里程碑" ext-class="">
+          <input bindinput="formInputChange" data-field="title" class="weui-input" placeholder="请输入里程碑" value="{{milepost.title}}"/>
+      </mp-cell>
+    </mp-cells>
+    <mp-cells title="描述内容">
+      <mp-cell has-header="{{false}}" has-footer="{{false}}" title="" ext-class="" prop="desc">
+        <textarea class="weui-textarea"  bindinput="formInputChange" data-field="desc" value="{{milepost.desc}}" placeholder="请输入" maxlength="120" style="height: 3.3em" />
+        <view class="weui-textarea-counter">{{milepost.desc.length}}/120</view>
+        </mp-cell>
+    </mp-cells>
+    <mp-cells title="标记">
+        <!-- <mp-checkbox-group prop="radio" multi="{{false}}" bindchange="radioChange" >
+            <mp-checkbox wx:for="{{icons}}" wx:key="value"  value="{{item.value}}" checked="{{item.checked}}">
+              <text class="weui-icon weui-steps__icon {{item.name}}"></text>
+            </mp-checkbox>
+        </mp-checkbox-group> -->
+        <checkbox-group bindchange="checkboxChange">
+          <label class="weui-cell weui-check__label" wx:for="{{icons}}" wx:key="value">
+            <view class="weui-cell__hd">
+              <checkbox value="{{item.value}}" checked="{{item.checked}}"/>
+            </view>
+            <view class="weui-cell__bd">
+            <text class="weui-icon weui-steps__icon {{item.name}}" wx:if="{{item.name}}"></text>
+            <text wx:else>无</text>
+            </view>
+          </label>
+        </checkbox-group>
+    </mp-cells>
+  </mp-form>
+  <view slot="button">
+      <button class="weui-btn" type="primary" data-motto="{{userConfig.content}}" bindtap="save">保存</button>
+  </view>
+</mp-form-page>
+

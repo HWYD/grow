@@ -1,5 +1,5 @@
 // miniprogram/pages/setMotto/setMotto.js
-import { formatDate } from '../../utils/index'
+import { formatDate, addZero } from '../../utils/index'
 let content = ''
 const db = wx.cloud.database()
 let mottoShow = true
@@ -12,10 +12,13 @@ Page({
     slelectId: -1,
     userConfig: {
       birthday: '',
+      birthTime: '',
       mottoShow: false,
       motto: ''
     },
-    slelectEndTime:''
+    slelectEndDay: '',
+    tipShow: false,
+    tipMsg:''
   },
   /**
    * 生命周期函数--监听页面加载
@@ -29,12 +32,10 @@ Page({
         })
       }
     })
-    const slelectEndTime = formatDate()
+    const slelectEndDay = formatDate()
     this.setData({
-      slelectEndTime
+      slelectEndDay
     })
-    // this.getMottoList()
-    // this.getUserMottoShow()
   },
   //文本框操作
   onInput(event) {
@@ -48,7 +49,7 @@ Page({
       }
     })
   },
-  //用户设置时间
+  //用户设置日期
   bindDateChange(e) {
     this.setData({
       userConfig: {
@@ -57,19 +58,36 @@ Page({
       }
     })
   },
-  //获取格言列表
-  getMottoList() {
-    db.collection('motto')
-      .get()
-      .then((res) => {
-        this.setData({
-          mottosList: res.data[0].motto
-        })
-      })
-      .catch(console.error)
+  //用户设置时间
+  bindTimeChange(e) {
+    this.setData({
+      userConfig: {
+        ...this.data.userConfig,
+        birthTime: e.detail.value
+      }
+    })
   },
   //保存设置
   save() {
+    if(!this.data.userConfig.birthday){
+      this.setData({
+        tipShow: true,
+        tipMsg:'请填写生日日期'
+      })
+      return
+    }
+    if (this.data.userConfig.birthday == this.data.slelectEndDay) {
+      const nowTime = new Date()
+      const nowTimeNum = Number(nowTime.getHours() + addZero(nowTime.getMinutes()))
+      const setTimeNum = Number(this.data.userConfig.birthTime.replace(new RegExp(":"),''))
+      if(setTimeNum > nowTimeNum){
+        this.setData({
+          tipShow: true,
+          tipMsg:'生日时间不能超过当前时间'
+        })
+        return
+      }
+    }
     wx.setStorage({
       key: 'userConfig',
       data: JSON.stringify(this.data.userConfig),
@@ -78,9 +96,9 @@ Page({
           title: '设置成功',
           image: '../../images/smile16.png'
         })
-        setTimeout(()=>{
+        setTimeout(() => {
           wx.navigateBack()
-        },1000)
+        }, 1000)
       }
     })
   },

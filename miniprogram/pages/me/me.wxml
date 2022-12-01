@@ -1,6 +1,6 @@
 <block wx:if="{{!userInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" class="weui-btn" type="primary" bindtap="getUserProfile" > 获取头像昵称1 </button>
-      <button wx:else open-type="getUserInfo" class="weui-btn" type="primary" bindgetuserinfo="getUserInfo"> 获取头像昵称2 </button>
+      <button wx:if="{{canIUseGetUserProfile}}" class="weui-btn" type="primary" bindtap="getUserProfile" > 获取头像昵称 </button>
+      <button wx:else open-type="getUserInfo" class="weui-btn" type="primary" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
 </block>
 <!-- <button class="weui-btn" type="primary"  bindgetuserinfo="bindGetUserInfo">获取头像昵称</button> -->
 <view class="bigContainer" wx:else>

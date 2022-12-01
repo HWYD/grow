@@ -10,9 +10,9 @@ data-planId="{{index}}"
 </block>
 <view class="tip">点击可以修改，长按完成目标哦~</view>
 
-<picker bindchange="selectGoal" value="{{index}}" 
+<!-- <picker bindchange="selectGoal" value="{{index}}" 
 range="{{selectGoal}}" >
 <view class="startGoal">
 开始行动
 </view>
-  </picker>
+  </picker> -->

@@ -116,7 +116,8 @@ Page({
           userConfig: JSON.parse(res.data)
         })
         const DateArr = this.data.userConfig.birthday.split('-')
-        birthTime = new Date(DateArr[0],Number(DateArr[1])-1,DateArr[2],0,0,0,0)
+        const timeArr = this.data.userConfig.birthTime? this.data.userConfig.birthTime.split(':'):[0,0]
+        birthTime = new Date(DateArr[0],Number(DateArr[1])-1,DateArr[2],timeArr[0],timeArr[1],0,0)
         this.calculate()
         inval = setInterval(() => {
           this.calculate()

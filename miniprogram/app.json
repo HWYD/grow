@@ -12,7 +12,9 @@
     "pages/acting/acting",
     "pages/modaltest/modaltest",
     "pages/addThings/addThings",
-    "pages/things/things"
+    "pages/things/things",
+    "pages/milepost/setMilepost/index",
+    "pages/milepost/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -53,7 +55,10 @@
     "mp-cells": "weui-miniprogram/cells/cells",
     "mp-form": "weui-miniprogram/form/form",
     "mp-badge": "weui-miniprogram/badge/badge",
-    "mp-icon": "weui-miniprogram/icon/icon"
+    "mp-icon": "weui-miniprogram/icon/icon",
+    "mp-toptips": "weui-miniprogram/toptips/toptips",
+    "mp-checkbox-group": "weui-miniprogram/checkbox-group/checkbox-group",
+    "mp-checkbox": "weui-miniprogram/checkbox/checkbox"
   },
   "lazyCodeLoading": "requiredComponents"
 }

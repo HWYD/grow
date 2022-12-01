@@ -6,7 +6,33 @@ Page({
    * 页面的初始数据
    */
   data: {
- 
+    progress:[
+      {
+        title:'出生',
+        desc:'描述1',
+        icon:''
+      },
+      {
+        title:'小学',
+        desc:'描述1',
+        icon:'weui-icon-info'
+      },
+      {
+        title:'初中',
+        desc:'描述1',
+        icon:'weui-icon-warn'
+      },
+      {
+        title:'高中',
+        desc:'描述1',
+        icon:'weui-icon-success'
+      },
+      {
+        title:'大学',
+        desc:'描述1',
+        icon:'weui-icon-waiting'
+      }
+    ]
   },
 
 uploadMottos(){
@@ -24,7 +50,9 @@ wx.cloud.callFunction({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-this.getToken()
+  },
+  edit(e){
+    console.log(e.currentTarget.dataset.milepost)
   },
   getToken() {
     wx.login({
@@ -81,7 +109,6 @@ wx.cloud.callFunction({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-this.getopenid()
   },
 
   /**

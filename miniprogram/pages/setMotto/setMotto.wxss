@@ -1,5 +1,5 @@
 page{
- background-color: #f7f7f7;
+ /* background-color: #f7f7f7; */
  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 }
 /* .switch_box{

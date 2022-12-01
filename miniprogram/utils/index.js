@@ -9,3 +9,7 @@ export function formatDate(time) {
   const d = `0${date.getDate()}`.slice(-2)
   return `${y}-${m}-${d}`
 }
+//不足两位数前面补零
+export function addZero(num){
+  return `0${num}`.slice(-2)
+}

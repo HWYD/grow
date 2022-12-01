@@ -1,9 +1,8 @@
 <page-meta root-font-size="system"/>
 <view class="page">
-<!-- 第一 -->
 <view class="weui-steps weui-steps_vertical">
-		<block  wx:for="{{progress}}" wx:key="index">
-      <view class=" weui-steps__item  weui-steps__item_success {{item.icon? 'weui-steps__item_icon':''}}" data-milepost="{{item}}" bindtap="edit">
+		<block  wx:for="{{course}}" wx:key="index">
+      <view class=" weui-steps__item  weui-steps__item_success {{item.icon? 'weui-steps__item_icon':''}}" data-milepost="{{item}}" data-index="{{index}}" bindtap="edit">
         <view class="weui-steps__item__inner">
           <text class="weui-steps__item__title">{{item.title}}</text>
           <text class="weui-steps__item__desc">{{item.desc}}</text>
